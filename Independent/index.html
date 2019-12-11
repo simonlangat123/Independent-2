@@ -1,48 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 200px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    
+    .navbar {
+      background-color: linear-gradient(to bottom right, red, yellow);
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
 
-.price {
-  color: grey;
-  font-size: 22px;
-}
-
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: blue;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
-</style>
+     .jumbotron {
+      margin-bottom: 0;
+      background-image: linear-gradient(to bottom right, red, yellow);
+    }
+   
+    
+    footer {
+      background-color: #e20e0e;
+      padding: 25px;
+    }
+  </style>
 </head>
 <body>
 
-<h2 style="text-align:center">Custom Kicks</h2>
-
-<div class="card">
-  <img src="https://i.pinimg.com/originals/70/7d/3e/707d3efc23f3d43d59cc1bd91c470bab.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Fire Kicks</h1>
-  <p class="price">$19.99</p>
-  <p>These look dope, but only a few left.</p>
-  <p><button>Add to Cart</button></p>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Dope Kicks</h1>      
+    <p>“Work hard. Dream big.”</p>
+    <p1>“By Simon Langat”</p1>
+  </div>
 </div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Clothes</a></li>
+        <li><a href="#">Accessories</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">Jordan 12 X LV</div>
+        <div class="panel-body"><img src="https://i.pinimg.com/564x/ce/40/64/ce40647a6851d967ef914fbd1976308b.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+      
+          </form>
+
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Air Force 1</div>
+        <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/81uiWMk9dnL._UX500_.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+      
+          </form>
+          <div class="form-group">
+            <label for="flavorShot">Flavor Shot</label>
+            <select id="flavorShot" class="form-control" name="flavor">
+              <option value="">None</option>
+              <option value="caramel">Caramel</option>
+              <option value="almond">Almond</option>
+              <option value="mocha">Mocha</option>
+            </select>
+          
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Custom Supreme X Louis Vittuon</div>
+        <div class="panel-body"><img src="http://www.opckicks.com/uploads/3/8/7/1/38710649/s420836078671635607_p387_i43_w640.jpeg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <p><button>Add to Cart</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">Sunset Jordan 11</div>
+        <div class="panel-body"><img src="https://i.pinimg.com/originals/70/7d/3e/707d3efc23f3d43d59cc1bd91c470bab.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+        <p><button>Add to Cart</button></p>
+      </div>
+  
+  </div>
+</div>
+<!-- the checklist -->
+<div class="card card-default">
+  <div class="card-body">
+    <h4>Shopping list:</h4>
+    <div data-coffee-order="checklist">
+    </div>
+  </div>
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+<button type="reset" class="btn btn-secondary">Reset</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<script src="scripts/validation.js" charset="utf-8"></script>
+<script src="scripts/checklist.js" charset="utf-8"></script>
+<script src="scripts/formhandler.js" charset="utf-8"></script>
+<script src="scripts/datastore.js" charset="utf-8"></script>
+<script src="scripts/truck.js" charset="utf-8"></script>
+<script src="scripts/main.js" charset="utf-8"></script>
 
 </body>
 </html>
