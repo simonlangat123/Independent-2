@@ -25,11 +25,11 @@
     };
 
     // The method that adds a new row to the checklist
-    CheckList.prototype.addRow = function (coffeeOrder) {
+    CheckList.prototype.addRow = function (storeOrder) {
         // Remove any existing rows that match the email address
-        this.removeRow(coffeeOrder.emailAddress);
+        this.removeRow(storeOrder.emailAddress);
         // Create a new instance of a row, using the coffee order info
-        let rowElement = new Row(coffeeOrder);
+        let rowElement = new Row(storeOrder);
         // Add the new row instance's $element property to the checklist
         this.$element.append(rowElement.$element);
     };
@@ -37,30 +37,30 @@
     CheckList.prototype.removeRow = function (email) {
         this.$element
           .find('[value="' + email + '"]')
-          .closest('[data-coffee-order="checkbox"]')
+          .closest('[data-Shopping-List="checkbox"]')
           .remove();
     };
 
     // Each row is one outstanding order
-    function Row(coffeeOrder) {
+    function Row(storeOrder) {
       let $div = $('<div></div>', {
-            'data-coffee-order': 'checkbox',
+            'data-Shopping-List': 'checkbox',
             'class': 'checkbox'
           });
       let $label = $('<label></label>');
 
       let $checkbox = $('<input></input>', {
             type: 'checkbox',
-            value: coffeeOrder.emailAddress
+            value: storeOrder.emailAddress
           });
 
-      let description = coffeeOrder.size + ' ';
-      if (coffeeOrder.flavor) {
-          description += coffeeOrder.flavor + ' ';
+      let description = storeOrder.size + ' ';
+      if (storeOrderer.flavor) {
+          description += storeOrder.flavor + ' ';
       }
-      description += coffeeOrder.coffee + ', ';
-      description += ' (' + coffeeOrder.emailAddress + ')';
-      description += ' [' + coffeeOrder.strength + 'x]';
+      description += storeOrder.coffee + ', ';
+      description += ' (' + storeOrder.emailAddress + ')';
+      description += ' [' + storeOrder.strength + 'x]';
 
       $label.append($checkbox);
       $label.append(description);
