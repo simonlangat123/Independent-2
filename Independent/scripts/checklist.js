@@ -37,14 +37,14 @@
     CheckList.prototype.removeRow = function (email) {
         this.$element
           .find('[value="' + email + '"]')
-          .closest('[data-Shopping-List="checkbox"]')
+          .closest('[data-store-order="checkbox"]')
           .remove();
     };
 
     // Each row is one outstanding order
     function Row(storeOrder) {
       let $div = $('<div></div>', {
-            'data-Shopping-List': 'checkbox',
+            'data-store-order': 'checkbox',
             'class': 'checkbox'
           });
       let $label = $('<label></label>');
