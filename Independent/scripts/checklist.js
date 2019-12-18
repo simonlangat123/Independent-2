@@ -53,14 +53,18 @@
             type: 'checkbox',
             value: storeOrder.emailAddress
           });
+          console.log(storeOrder.size)
 
-      let description = storeOrder.size + ' ';
-      if (storeOrderer.flavor) {
-          description += storeOrder.flavor + ' ';
+          let description = storeOrder + ' ';
+          if (storeOrder.strength) {
+      
       }
-      description += storeOrder.coffee + ', ';
+ 
       description += ' (' + storeOrder.emailAddress + ')';
-      description += ' [' + storeOrder.strength + 'x]';
+      description += ' [' + storeOrder.firstName + ']';
+      description += ' [' + storeOrder.lastName + ']';
+      description += ' [' + storeOrder.shoeSelect + ']';
+
 
       $label.append($checkbox);
       $label.append(description);

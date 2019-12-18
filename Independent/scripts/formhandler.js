@@ -20,8 +20,8 @@
     }
   
     FormHandler.prototype.addSubmitHandler = function (func) {
-      console.log('Setting submit handler for form');
-      this.$formElement.on('submit', function (event) {
+      console.log('Setting submit handler for form...');
+      this.$formElement.on('submit', function(event) {
         event.preventDefault();  
   
         // get the data from the form and store it in a data object
@@ -47,6 +47,7 @@
         } else {
           event.target.setCustomValidity(emailAddress + ' is not an authorized email address!');    
         }
+
       });
     };
   
