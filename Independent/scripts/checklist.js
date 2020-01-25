@@ -15,7 +15,7 @@
     }
 
     // when the checkbox is clicked, get the email address from the row
-    // and then call the function (func) that is passed in with the email as a parameter
+    // and then call the function (func) that is passed in with the email
     CheckList.prototype.addClickHandler = function (func) {
         this.$element.on('click', 'input', function (event) {
             var email = event.target.value;
@@ -24,13 +24,13 @@
         }.bind(this));
     };
 
-    // The method that adds a new row to the checklist
+    // adds a row to the checklist
     CheckList.prototype.addRow = function (storeOrder) {
-        // Remove any existing rows that match the email address
+        // Remove rows that match the email 
         this.removeRow(storeOrder.emailAddress);
-        // Create a new instance of a row, using the coffee order info
+        // Create a new instance of a row
         let rowElement = new Row(storeOrder);
-        // Add the new row instance's $element property to the checklist
+        // Add the new row instance's $element property
         this.$element.append(rowElement.$element);
     };
 
@@ -41,11 +41,10 @@
           .remove();
     };
 
-    // Each row is one outstanding order
+    // Each row is a order
     function Row(storeOrder) {
       let $div = $('<div></div>', {
-            'data-store-order': 'checkbox',
-            'class': 'checkbox'
+           
           });
       let $label = $('<label></label>');
 
@@ -53,10 +52,9 @@
             type: 'checkbox',
             value: storeOrder.emailAddress
           });
-          console.log(storeOrder.size)
 
-          let description = storeOrder + ' ';
-          if (storeOrder.strength) {
+          let description = ' ';
+          if (storeOrder) {
       
       }
  
@@ -64,7 +62,10 @@
       description += ' [' + storeOrder.firstName + ']';
       description += ' [' + storeOrder.lastName + ']';
       description += ' [' + storeOrder.shoeSelect + ']';
+      description += ' [' + storeOrder.phoneNumber + ']';
 
+
+      
 
       $label.append($checkbox);
       $label.append(description);

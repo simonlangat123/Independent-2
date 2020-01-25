@@ -30,7 +30,6 @@
           data[item.name] = item.value;
           console.log(item.name + ' is ' + item.value);
         });
-        console.log(data);
         func(data); // call the function that was passed in on the data from the form
   
         this.reset(); // reset the form
